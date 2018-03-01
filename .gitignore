@@ -1,5 +1,6 @@
 *.swp
 *.gpg
 *.pyc
+accounts/*
 thunderbird/
 autoconf/log
