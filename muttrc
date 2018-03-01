@@ -15,6 +15,7 @@ set mailcap_path = ~/.config/mutt/etc/mailcap
 set date_format="%d.%m.%Y %H:%M"
 set index_format="%4C %Z %D %-30.30L %s (%-4.4c)"
 set forward_format = "Fwd: %s"
+set signature = ~/.config/mutt/signature
 set markers = no
 set mark_old = no
 set smtp_authenticators = 'gssapi:login'
