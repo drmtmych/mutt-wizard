@@ -1,0 +1,31 @@
+# vim: filetype=neomuttrc
+# muttrc file for account drmtmych@virtuozzo.mipt
+set realname = "Andrey Drobyshev"
+set from = "drmtmych@virtuozzo.mipt.ru"
+set smtp_url = "smtp://drmtmych@parallels.mipt.ru:25"
+# set sendmail = "/usr/bin/msmtp -a drmtmych@virtuozzo.mipt"
+set smtp_authenticators = "login"
+set folder = "~/.mail/drmtmych@virtuozzo.mipt"
+set certificate_file = "/etc/ca-certificates/extracted/ca-bundle.trust.crt" 
+set header_cache = ~/.config/mutt/accounts/drmtmych@virtuozzo.mipt/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/drmtmych@virtuozzo.mipt/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/drmtmych@virtuozzo.mipt/certificates
+source "~/.config/mutt/credentials/getmuttpass drmtmych@virtuozzo.mipt |"
+
+set mbox_type = Maildir
+# set ssl_starttls = yes
+# set ssl_force_tls = yes
+
+bind index,pager g noop
+bind index gg first-entry
+unmailboxes *
+mailboxes "=drmtmych@virtuozzo" "=-------------------------" =INBOX "=Sent" =Drafts =Trash =Spam
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=Sent<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=Trash<enter>" "Go to trash."
+macro index,pager gS "<change-folder>=Spam<enter>" "Go to spam."
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+Drafts"
+set trash = "+Trash"
