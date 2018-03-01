@@ -18,7 +18,6 @@ set index_format="%2C %?X?A& ? %D %-15.15F %s (%-4.4c)"
 set forward_format = "Fwd: %s"
 set markers = no
 set mark_old = no
-set mime_forward = yes
 set smtp_authenticators = 'gssapi:login'
 auto_view text/html
 auto_view application/pdf
