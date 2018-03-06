@@ -40,7 +40,8 @@ bind index U undelete-message
 bind index F search
 bind index,pager R group-reply
 macro index,pager S '<sync-mailbox>
-macro index,pager \Cu |urlview\n
+
+macro index,pager \Cl |urlscan\n
 
 # View attachments properly.
 bind attach <return> view-mailcap
